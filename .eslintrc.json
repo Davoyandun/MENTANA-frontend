@@ -22,6 +22,7 @@
             "error",
             "tab"
         ],
+        "no-console": "error",
         "quotes": [
             "error",
             "single"
