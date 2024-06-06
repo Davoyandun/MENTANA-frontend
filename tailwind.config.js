@@ -18,6 +18,9 @@ module.exports = {
 			},
 		},
 		extend: {
+			fontFamily: {
+				'sans': ['Roboto', 'sans-serif'],
+			  },
 			colors: {
 				chaarcoal100: '#577C9E',
 				chaarcoal300: '#486784',
