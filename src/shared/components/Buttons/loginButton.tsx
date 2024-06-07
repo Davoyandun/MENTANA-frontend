@@ -8,7 +8,7 @@ export default function LoginButton() {
    
     return (
        <div>
-            <Button className="bg-chaarcoalBase hover:bg-chaarcoal700">
+            <Button className="bg-chaarcoal300 hover:bg-chaarcoal700">
                 Iniciar sesión
             </Button>
        </div>

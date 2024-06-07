@@ -7,7 +7,7 @@ export default function Banner() {
       <div className="flex flex-col w-[90%] h-full pt-5 lg:pt-0 lg:flex-row bg-white lg:h-[500px] lg:w-11/12 rounded-xl lg:mt-16">
         <div className="lg:w-2/4 h-full flex flex-col justify-center lg:pl-20 self-center">
           <div>
-            <p className="text-3xl text-center lg:text-start lg:text-5xl  font-bold text-chaarcoal700">
+            <p className="text-3xl text-center lg:text-start lg:text-5xl  font-bold text-chaarcoalBase">
               Mejora tu salud mental con Mentana
             </p>
             <div className="lg:hidden h-full flex items-center">

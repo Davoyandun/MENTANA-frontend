@@ -8,7 +8,7 @@ export default function RegisterButton() {
    
     return (
        <div>
-            <Button className="bg-chaarcoalBase hover:bg-chaarcoal700">
+            <Button className="bg-chaarcoal300 hover:bg-chaarcoal700">
                 Registrarse
             </Button>
        </div>
