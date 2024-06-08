@@ -18,6 +18,9 @@ module.exports = {
 			},
 		},
 		extend: {
+			fontFamily: {
+				'sans': ['Roboto', 'sans-serif'],
+			  },
 			colors: {
 				chaarcoal100: '#577C9E',
 				chaarcoal300: '#486784',
@@ -30,6 +33,7 @@ module.exports = {
 				teaRoseBase: '#F8C9CE',
 				teaRose300: '#F3A5AD',
 				teaRose500: '#EE818C',
+				teaRose700: '#EC6F7B',
 				whiteSmokeBase: '#F5F5F5',
 				whiteSmoke300: '#E0E0E0',
 				whiteSmoke500: '#CCCCCC',
