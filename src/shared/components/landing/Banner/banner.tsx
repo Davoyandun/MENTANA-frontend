@@ -1,10 +1,10 @@
 import React from "react";
-import ReserveButton from "../Buttons/reserveButton";
+import ReserveButton from "../../Buttons/reserveButton";
 
 export default function Banner() {
   return (
     <>
-      <div className="flex flex-col w-[90%] h-full pt-5 lg:pt-0 lg:flex-row bg-white lg:h-[500px] lg:w-11/12 rounded-xl lg:mt-16">
+      <div className="flex flex-col w-[90%] h-full pt-5 lg:pt-0 lg:flex-row bg-white lg:h-[500px] lg:w-11/12 rounded-xl">
         <div className="lg:w-2/4 h-full flex flex-col justify-center lg:pl-20 self-center">
           <div>
             <p className="text-3xl text-center lg:text-start lg:text-5xl  font-bold text-chaarcoalBase">
