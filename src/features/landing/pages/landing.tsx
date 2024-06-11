@@ -1,5 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 'use client'
+import React from 'react'
 import Banner from '@/features/landing/components/Banner/banner'
 import StepToUse from '@/features/landing/components/StepToUse/stepToUse'
 import Benefits from '@/features/landing/components/Benefits/Benefits'

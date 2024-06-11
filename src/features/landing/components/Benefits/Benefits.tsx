@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable react/react-in-jsx-scope */
 'use client'
-
+import React from 'react'
 export default function Benefits() {    
 	return (
         
