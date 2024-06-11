@@ -1,6 +1,5 @@
-/* eslint-disable react/react-in-jsx-scope */
 import CardStepToStep from './cardStepToStep'
-
+import React from 'react'
 
 export default function StepsForTablet() {
 	return(
