@@ -1,3 +1,4 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 /* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -22,6 +23,7 @@ module.exports = {
 				'sans': ['Roboto', 'sans-serif'],
 			  },
 			colors: {
+				chaarcoalLight: '#6185A8',
 				chaarcoal100: '#577C9E',
 				chaarcoal300: '#486784',
 				chaarcoalBase: '#34495E',
