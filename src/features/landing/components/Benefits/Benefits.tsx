@@ -1,17 +1,13 @@
-/* eslint-disable react/no-unknown-property */
-/* eslint-disable react/jsx-no-comment-textnodes */
-/* eslint-disable react/react-in-jsx-scope */
 'use client'
+import React from 'react'
 
 export default function Benefits() {    
 	return (
-        
 		<div className="bg-gradient-to-b from-chaarcoalLight  to-whiteSmokeBase  min-h-screen w-full flex items-center justify-center pb-60">
 			<div className="bg-white w-[90%] lg:h-[400px] justify-evenly gap-12 rounded-xl flex flex-col border-t-8 lg:border-t-0 lg:border-l- border-solid border-teaRose500 lg:mb-[30rem] mb-96py-3 lg:py-0">
 				<p className="font-bold text-xl text-center lg:text-start lg:text-3xl md:ml-11 h-1/4 pt-4 text-chaarcoalBase md:mt-5 lg:mt-12 md:self-start">
           ¿Porqué es importante la terapia?
 				</p>
-				// eslint-disable-next-line react/react-in-jsx-scope
 				<div className="flex flex-col lg:flex-row w-full pb-14">
 					<div className="flex flex-col items-center text-start lg:w-1/2">
 						<div className="w-11/12 lg:w-3/5">

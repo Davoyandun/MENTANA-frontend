@@ -2,8 +2,6 @@ import React from 'react'
 import Navbar from '@/shared/components/navbar/navbar'
 import Landing from '@/features/landing/pages/landing'
 
-
-
 export default function Home() {
 	return (
 		<>
