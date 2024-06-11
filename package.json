@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest"
+    "test": "jest",
+    "start:test": "NODE_ENV=test logoNavbar.tsx"
   },
   "dependencies": {
     "@next/font": "^14.2.3",

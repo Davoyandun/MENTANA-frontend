@@ -32,7 +32,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "src/shared/components/navbar/test/logoNavbar.test.js", "setupTests.js"  ],
   "exclude": [
     "node_modules"
   ]
