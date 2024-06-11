@@ -1,5 +1,5 @@
 import React from 'react'
-import ReserveButton from '../../../shared/components/Buttons/reserveButton'
+import ReserveButton from '../../../../shared/components/Buttons/reserveButton'
 
 export default function Banner() {
 	return (

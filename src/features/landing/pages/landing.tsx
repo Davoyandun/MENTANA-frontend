@@ -1,8 +1,8 @@
 /* eslint-disable react/react-in-jsx-scope */
 'use client'
-import Banner from '@/features/landing/Banner/banner'
-import StepToUse from '@/features/landing/StepToUse/stepToUse'
-import Benefits from '@/features/landing/Benefits/Benefits'
+import Banner from '@/features/landing/components/Banner/banner'
+import StepToUse from '@/features/landing/components/StepToUse/stepToUse'
+import Benefits from '@/features/landing/components/Benefits/Benefits'
 
 export default function Landing() {
 	return (
