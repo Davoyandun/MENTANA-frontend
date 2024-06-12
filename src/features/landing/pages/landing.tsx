@@ -10,7 +10,7 @@ export default function Landing() {
 			<div className="bannerWrapper flex flex-row md:mt-24 mt-4 justify-center mb-28 md:mb-0">
 				<Banner />
 			</div>
-			<div className='flex flex-col lg:mt-40'>
+			<div className='flex flex-col md:mt-28 lg:mt-40'>
 				<div className="w-full h-full">
 					<StepToUse />
 				</div>
