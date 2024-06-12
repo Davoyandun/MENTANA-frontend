@@ -3,7 +3,7 @@
 
 export default function Benefits() {
 	return (
-		<div className="bg-gradient-to-b from-chaarcoalLight to-whiteSmokeBase w-full flex items-center justify-center pb-56">
+		<div className="bg-gradient-to-b from-chaarcoalLight to-whiteSmokeBase w-full flex items-center justify-center lg:pb-56 pb-28">
 			<div className="bg-white w-[90%] lg:h-[400px] justify-evenly gap-12 rounded-xl flex flex-col border-t-8 lg:border-t-0 lg:border-l-8 border-teaRose500 py-3 lg:py-0">
 				<p className="font-bold text-xl text-center lg:text-start lg:text-3xl md:ml-11 h-1/4 pt-4 text-chaarcoalBase md:mt-5 lg:mt-12 md:self-start">
 					¿Por qué es importante la terapia?
