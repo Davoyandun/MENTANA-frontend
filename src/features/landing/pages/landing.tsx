@@ -1,8 +1,8 @@
 /* eslint-disable react/react-in-jsx-scope */
 import Banner from '@/features/landing/components/Banner/banner'
 import StepToUse from '@/features/landing/components/StepToUse/stepToUse'
-import Benefits from '@/features/landing/components/Benefits/Benefits'
 import Blog from '@/features/landing/components/Blog/Blog'
+import AboutUs from '@/features/landing/components/AboutUs/aboutUs'
 
 export default function Landing() {
 	return (
@@ -15,7 +15,7 @@ export default function Landing() {
 					<StepToUse />
 				</div>
 				<div className="w-full h-full">
-					<Benefits />
+					<AboutUs />
 				</div>
 				<div className="w-full h-full">
 					<Blog />
