@@ -6,7 +6,7 @@ import AboutUs from '@/features/landing/components/AboutUs/aboutUs'
 
 export default function Landing() {
 	return (
-		<div>
+		<div className='w-full'>
 			<div className="bannerWrapper flex flex-row md:mt-24 mt-4 justify-center mb-28 md:mb-0">
 				<Banner />
 			</div>

@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import LoginButton from '../Buttons/loginButton'
 import RegisterButton from '../Buttons/registerButton'
 import LogoNavbar from './logoNavbar'
+import Link from 'next/link'
 
 export default function Navbar() {
 	const [menuOpen, setMenuOpen] = useState(false)
@@ -42,7 +43,10 @@ export default function Navbar() {
 					<li className="lg:w-[10%]"><a href="#" className="hover:font-bold">Agendar</a></li>
 					<li className="lg:w-[15%]"><a href="#" className="hover:font-bold">Sobre nosotros</a></li>
 					<li className="lg:w-[5%]"><a href="#" className="hover:font-bold">Blog</a></li>
-					<li className="lg:w-[22%]"><a href="#" className="hover:font-bold">Preguntas frecuentes</a></li>
+					<li className="lg:w-[22%]">
+						<Link href="/faq" className="hover:font-bold">Preguntas frecuentes</Link>
+					</li>
+					
 				</ul>
 
 				{menuOpen && <hr className="border-t border-white w-full mt-2 lg:hidden" />} 
