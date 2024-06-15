@@ -6,7 +6,7 @@ import StepsForTablet from './stepsForTablet'
 
 export default function StepToUse() {
 	return (
-		<div className="bg-gradient-to-b from-whiteSmokeBase to-chaarcoalLight  w-full flex items-center justify-center lg:pb-56 pb-28">
+		<div className="bg-gradient-to-b from-whiteSmokeBase to-chaarcoalLight pt-7 md:pt-36  w-full flex items-center justify-center lg:pb-56 pb-28">
 			<div className="bg-white w-[90%] lg:h-[400px] justify-evenly gap-12 rounded-xl flex flex-col border-l-8 border-solid border-teaRose500 py-3 lg:py-0">
 				<p className="font-bold text-2xl lg:text-3xl md:ml-11 h-1/4 pt-4 text-chaarcoalBase md:mt-5 lg:mt-12 self-center md:self-start">
 					Cómo funciona
