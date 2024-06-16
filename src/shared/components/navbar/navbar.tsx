@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import LoginButton from '../Buttons/loginButton'
 import RegisterButton from '../Buttons/registerButton'
 import LogoNavbar from './logoNavbar'
@@ -14,6 +14,11 @@ export default function Navbar() {
 	const toggleMenu = () => {
 		setMenuOpen(!menuOpen)
 	}
+
+	useEffect(() => {
+		setMenuOpen(false)
+	}, [pathname])
+	
 
 
 
