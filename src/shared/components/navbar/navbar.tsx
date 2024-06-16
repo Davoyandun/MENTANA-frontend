@@ -21,9 +21,9 @@ export default function Navbar() {
 		<nav className={`fixed flex w-full top-0 z-50 bg-chaarcoal300 py-3 ${menuOpen ? 'h-screen py-4' : 'lg:h-[100px]'}`}>
 			<div className={`container lg:px-0 flex flex-col lg:flex-row justify-between items-center ${menuOpen ? 'h-full' : ''}`}> 
 				<div className="flex justify-between w-full lg:w-auto">
-					<div >
+					<Link href='/'>
 						<LogoNavbar/> 
-					</div>
+					</Link>
 					<div className="block lg:hidden self-center">
 						<button onClick={toggleMenu} className="text-white focus:outline-none">
 							{menuOpen ? (
