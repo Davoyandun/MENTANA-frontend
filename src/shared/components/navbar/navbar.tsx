@@ -1,4 +1,3 @@
-
 'use client'
 
 import React, { useState } from 'react'
@@ -6,13 +5,17 @@ import LoginButton from '../Buttons/loginButton'
 import RegisterButton from '../Buttons/registerButton'
 import LogoNavbar from './logoNavbar'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
 	const [menuOpen, setMenuOpen] = useState(false)
+	const pathname = usePathname()
 
 	const toggleMenu = () => {
 		setMenuOpen(!menuOpen)
 	}
+
+
 
 	return (
 		<nav className={`fixed flex w-full top-0 z-50 bg-chaarcoal300 py-3 ${menuOpen ? 'h-screen py-4' : 'lg:h-[100px]'}`}>
@@ -34,19 +37,32 @@ export default function Navbar() {
 							)}
 						</button>
 					</div>
-                    
 				</div>
 
 				{menuOpen && <hr className="border-t border-white w-full mt-5 lg:hidden" />} 
 
 				<ul className={`flex flex-col items-center lg:flex lg:flex-row lg:text-center lg:w-3/4 lg:text-xl lg:justify-center gap-4 lg:gap-[75px] space-x-0 lg:space-x-6 text-white mt-4 lg:mt-0 ${menuOpen ? 'flex-grow justify-center gap-6' : 'hidden'}`}> 
-					<li className="lg:w-[10%]"><a href="#" className="hover:font-bold">Agendar</a></li>
-					<li className="lg:w-[15%]"><a href="#" className="hover:font-bold">Sobre nosotros</a></li>
-					<li className="lg:w-[5%]"><a href="#" className="hover:font-bold">Blog</a></li>
-					<li className="lg:w-[22%]">
-						<Link href="/faq" className="hover:font-bold">Preguntas frecuentes</Link>
+					<li className="lg:w-[10%]">
+						<Link href="/agendar" className={`hover:font-bold ${ pathname === '/agendar' ? 'active-link' : ''}`}>
+							Agendar
+						</Link>
 					</li>
-					
+					<li className="lg:w-[15%]">
+						<Link href="/sobre-nosotros" className={`hover:font-bold ${pathname === '/sobre-nosotros' ? 'active-link' : ''}`}>
+							Sobre nosotros
+						</Link>
+					</li>
+					<li className="lg:w-[5%]">
+						<Link href="/blog" className={`hover:font-bold ${pathname === '/blog' ? 'active-link' : ''}`}>
+							Blog
+						</Link>
+					</li>
+					<li
+						className={`lg:w-[22%] hover:font-bold ${pathname === '/faq' ? 'font-bold active-link' : ''}`}>
+						<Link href="/faq" >
+							Preguntas frecuentes
+						</Link>
+					</li>
 				</ul>
 
 				{menuOpen && <hr className="border-t border-white w-full mt-2 lg:hidden" />} 

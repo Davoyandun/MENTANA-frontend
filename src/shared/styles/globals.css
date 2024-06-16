@@ -8,6 +8,10 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
+.active-link {
+  font-weight: bold;
+}
+
   @layer base {
     :root {
       --background: 0 0% 100%;
