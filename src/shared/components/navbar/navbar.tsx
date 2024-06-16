@@ -48,17 +48,17 @@ export default function Navbar() {
 
 				<ul className={`flex flex-col items-center lg:flex lg:flex-row lg:text-center lg:w-3/4 lg:text-xl lg:justify-center gap-4 lg:gap-[75px] space-x-0 lg:space-x-6 text-white mt-4 lg:mt-0 ${menuOpen ? 'flex-grow justify-center gap-6' : 'hidden'}`}> 
 					<li className="lg:w-[10%]">
-						<Link href="/agendar" className={`hover:font-bold ${ pathname === '/agendar' ? 'active-link' : ''}`}>
+						<Link href="/agendar" className={`hover:font-bold ${ pathname === '/agendar' ? 'font-bold active-link' : ''}`}>
 							Agendar
 						</Link>
 					</li>
 					<li className="lg:w-[15%]">
-						<Link href="/sobre-nosotros" className={`hover:font-bold ${pathname === '/sobre-nosotros' ? 'active-link' : ''}`}>
+						<Link href="/sobre-nosotros" className={`hover:font-bold ${pathname === '/sobre-nosotros' ? 'font-bold active-link' : ''}`}>
 							Sobre nosotros
 						</Link>
 					</li>
 					<li className="lg:w-[5%]">
-						<Link href="/blog" className={`hover:font-bold ${pathname === '/blog' ? 'active-link' : ''}`}>
+						<Link href="/blog" className={`hover:font-bold ${pathname === '/blog' ? 'active-link font-bold' : ''}`}>
 							Blog
 						</Link>
 					</li>
