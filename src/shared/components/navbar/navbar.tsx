@@ -6,6 +6,7 @@ import RegisterButton from '../Buttons/registerButton'
 import LogoNavbar from './logoNavbar'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import routes, { Route } from './Routes/routes'
 
 export default function Navbar() {
 	const [menuOpen, setMenuOpen] = useState(false)
@@ -46,28 +47,17 @@ export default function Navbar() {
 
 				{menuOpen && <hr className="border-t border-white w-full mt-5 lg:hidden" />} 
 
-				<ul className={`flex flex-col items-center lg:flex lg:flex-row lg:text-center lg:w-3/4 lg:text-xl lg:justify-center gap-4 lg:gap-[75px] space-x-0 lg:space-x-6 text-white mt-4 lg:mt-0 ${menuOpen ? 'flex-grow justify-center gap-6' : 'hidden'}`}> 
-					<li className="lg:w-[10%]">
-						<Link href="/agendar" className={`hover:font-bold ${ pathname === '/agendar' ? 'font-bold active-link' : ''}`}>
-							Agendar
-						</Link>
-					</li>
-					<li className="lg:w-[15%]">
-						<Link href="/sobre-nosotros" className={`hover:font-bold ${pathname === '/sobre-nosotros' ? 'font-bold active-link' : ''}`}>
-							Sobre nosotros
-						</Link>
-					</li>
-					<li className="lg:w-[5%]">
-						<Link href="/blog" className={`hover:font-bold ${pathname === '/blog' ? 'active-link font-bold' : ''}`}>
-							Blog
-						</Link>
-					</li>
-					<li
-						className={`lg:w-[22%] hover:font-bold ${pathname === '/faq' ? 'font-bold active-link' : ''}`}>
-						<Link href="/faq" >
-							Preguntas frecuentes
-						</Link>
-					</li>
+					
+				<ul className={`flex flex-col items-center lg:flex lg:flex-row lg:text-center lg:w-3/4 lg:text-xl lg:justify-center gap-4 lg:gap-[75px] space-x-0 lg:space-x-6 text-white mt-4 lg:mt-0 ${menuOpen ? 'flex-grow justify-center gap-6' : 'hidden'}`}>
+					{routes.map((route: Route, index: number) => (
+						<li key={index}  className={`flex lg:w-[${route.width}]`}>
+							<Link href={route.path}>
+								<p className={`hover:font-bold  ${pathname === route.path ? 'font-bold active-link' : ''}`}>
+									{route.name}
+								</p>
+							</Link>
+						</li>
+					))}
 				</ul>
 
 				{menuOpen && <hr className="border-t border-white w-full mt-2 lg:hidden" />} 
