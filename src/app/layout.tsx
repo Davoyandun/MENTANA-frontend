@@ -3,6 +3,7 @@ import React from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '../shared/styles/globals.css'
+import Navbar from '@/shared/components/navbar/navbar'
 import '../config/firebase-config'
 import { AppWrapper } from '@/shared/context'
 
@@ -28,6 +29,7 @@ export default function RootLayout({
 			<html lang="en">
 			
 				<body className={inter.className}>
+					<Navbar/>
 					{children}
 				</body>
 			
