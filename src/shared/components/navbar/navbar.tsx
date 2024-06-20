@@ -1,16 +1,33 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
-import LoginButton from '../Buttons/loginButton'
-import RegisterButton from '../Buttons/registerButton'
-import LogoNavbar from './logoNavbar'
+
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import routes, { Route } from './Routes/routes'
+import React, { useState, useEffect } from 'react'
+import LoginButton from '../Buttons/loginButton'
+import RegisterButton from '../Buttons/registerButton'
+import LogoNavbar from './logoNavbar'
+import SignOutButton from '../Buttons/signOutButton'
+import { useAppContext } from '@/shared/context'
 
 export default function Navbar() {
+	const {userState} = useAppContext()
 	const [menuOpen, setMenuOpen] = useState(false)
 	const pathname = usePathname()
+	const [tokenFromLocalStorage, setTokenFromLocalStorage] = useState('')
+
+	
+
+	useEffect(() => {
+		const token = localStorage.getItem('token')
+		if (token) {
+			setTokenFromLocalStorage(token)
+		} else {
+			setTokenFromLocalStorage('')
+		}
+	}, [userState.token])
+
 
 	const toggleMenu = () => {
 		setMenuOpen(!menuOpen)
@@ -63,11 +80,11 @@ export default function Navbar() {
 				{menuOpen && <hr className="border-t border-white w-full mt-2 lg:hidden" />} 
 
 				<div className={`flex-row items-center lg:hidden mt-4 ${menuOpen ? 'flex' : 'hidden'} flex justify-end pb-4`}> 
-					<LoginButton />
+					{tokenFromLocalStorage ? <SignOutButton /> : <LoginButton />}
 					<RegisterButton />
 				</div>
 				<div className="hidden lg:flex">
-					<LoginButton />           
+					{tokenFromLocalStorage ? <SignOutButton /> : <LoginButton />}         
 					<RegisterButton />
 				</div>
 			</div>
