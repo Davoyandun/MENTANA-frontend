@@ -15,7 +15,7 @@ export default function Blog() {
 				<div className='flex flex-col lg:flex-row w-full gap-10 lg:gap-5 justify-center'>
 					<CardBlog 
 						title='Cómo manejar la ansiedad en tiempos de estrés' 
-						image={'Images/ansiedad.jpeg'} 
+						image={'/Images/ansiedad.jpeg'} 
 						description='Descubre estrategias efectivas para lidiar con la ansiedad durante momentos dificiles.' 
 						creationDate={'11/06/24'} 
 						author='Dr. Mentana'
@@ -23,7 +23,7 @@ export default function Blog() {
 					<hr className='hidden lg:flex self-center border-[1px] h-[400px] border-whiteSmoke500'/>
 					<CardBlog 
 						title='Cómo manejar la comunicación en pareja' 
-						image={'Images/comunPareja.jpeg'} 
+						image={'/Images/comunPareja.jpeg'} 
 						description='Aprende técnicas para fortalecer la conexión y entendimiento con tu pareja.' 
 						creationDate={'11/06/24'} 
 						author='Dr. Mentana'
@@ -32,7 +32,7 @@ export default function Blog() {
 
 					<CardBlog 
 						title='Cómo practicar la mindfulness en la vida diaria' 
-						image={'Images/mindfulness.jpeg'} 
+						image={'/Images/mindfulness.jpeg'} 
 						description='Descubre técnicas sencillas para incorporar la atención plena en tu rutina.' 
 						creationDate={'11/06/24'} 
 						author='Dr. Mentana'

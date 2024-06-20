@@ -15,7 +15,7 @@ export default function AboutUsCardDesktop({ image, title, description }: AboutU
 			<div className="flex flex-row gap-2">
 				<div>
 					{typeof image === 'string' ? (
-						<Image src={image} alt={title} />
+						<Image src={image} alt={title} width={45} height={45}/>
 					) : (
 						image
 					)}

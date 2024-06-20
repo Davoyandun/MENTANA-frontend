@@ -15,7 +15,7 @@ export default function AboutUsCardMobile({ image, title, description }: AboutUs
 			<div className='flex flex-col gap-2'>
 				<div className='self-center'>
 					{typeof image === 'string' ? (
-						<Image src={image} alt={title} className='h-[45px] w-[45px] self-center'/>
+						<Image src={image} alt={title} className='h-[45px] w-[45px] self-center' width={45} height={45}/>
 					) : (
 						image
 					)}
