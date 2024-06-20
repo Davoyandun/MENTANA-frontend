@@ -1,25 +1,52 @@
-
 'use client'
 
-import React, { useState } from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import routes, { Route } from './Routes/routes'
+import React, { useState, useEffect } from 'react'
 import LoginButton from '../Buttons/loginButton'
 import RegisterButton from '../Buttons/registerButton'
 import LogoNavbar from './logoNavbar'
+import SignOutButton from '../Buttons/signOutButton'
+import { useAppContext } from '@/shared/context'
+
 
 export default function Navbar() {
+	const {userState} = useAppContext()
 	const [menuOpen, setMenuOpen] = useState(false)
+	const pathname = usePathname()
+	const [tokenFromLocalStorage, setTokenFromLocalStorage] = useState('')
+
+	
+
+	useEffect(() => {
+		const token = localStorage.getItem('token')
+		if (token) {
+			setTokenFromLocalStorage(token)
+		} else {
+			setTokenFromLocalStorage('')
+		}
+	}, [userState.token])
+
 
 	const toggleMenu = () => {
 		setMenuOpen(!menuOpen)
 	}
 
+	useEffect(() => {
+		setMenuOpen(false)
+	}, [pathname])
+	
+	
+
+
 	return (
 		<nav className={`fixed flex w-full top-0 z-50 bg-chaarcoal300 py-3 ${menuOpen ? 'h-screen py-4' : 'lg:h-[100px]'}`}>
 			<div className={`container lg:px-0 flex flex-col lg:flex-row justify-between items-center ${menuOpen ? 'h-full' : ''}`}> 
 				<div className="flex justify-between w-full lg:w-auto">
-					<div >
+					<Link href='/'>
 						<LogoNavbar/> 
-					</div>
+					</Link>
 					<div className="block lg:hidden self-center">
 						<button onClick={toggleMenu} className="text-white focus:outline-none">
 							{menuOpen ? (
@@ -33,26 +60,31 @@ export default function Navbar() {
 							)}
 						</button>
 					</div>
-                    
 				</div>
 
 				{menuOpen && <hr className="border-t border-white w-full mt-5 lg:hidden" />} 
 
-				<ul className={`flex flex-col items-center lg:flex lg:flex-row lg:text-center lg:w-3/4 lg:text-xl lg:justify-center gap-4 lg:gap-[75px] space-x-0 lg:space-x-6 text-white mt-4 lg:mt-0 ${menuOpen ? 'flex-grow justify-center gap-6' : 'hidden'}`}> 
-					<li className="lg:w-[10%]"><a href="#" className="hover:font-bold">Agendar</a></li>
-					<li className="lg:w-[15%]"><a href="#" className="hover:font-bold">Sobre nosotros</a></li>
-					<li className="lg:w-[5%]"><a href="#" className="hover:font-bold">Blog</a></li>
-					<li className="lg:w-[22%]"><a href="#" className="hover:font-bold">Preguntas frecuentes</a></li>
+					
+				<ul className={`flex flex-col items-center lg:flex lg:flex-row lg:text-center lg:w-3/4 lg:text-xl lg:justify-center gap-4 lg:gap-[75px] space-x-0 lg:space-x-6 text-white mt-4 lg:mt-0 ${menuOpen ? 'flex-grow justify-center gap-6' : 'hidden'}`}>
+					{routes.map((route: Route, index: number) => (
+						<li key={index}  className={`flex ${route.width}`}>
+							<Link href={route.path}>
+								<p className={`hover:font-bold  ${pathname === route.path ? 'font-bold active-link' : ''}`}>
+									{route.name}
+								</p>
+							</Link>
+						</li>
+					))}
 				</ul>
 
 				{menuOpen && <hr className="border-t border-white w-full mt-2 lg:hidden" />} 
 
 				<div className={`flex-row items-center lg:hidden mt-4 ${menuOpen ? 'flex' : 'hidden'} flex justify-end pb-4`}> 
-					<LoginButton />
+					{tokenFromLocalStorage ? <SignOutButton /> : <LoginButton />}
 					<RegisterButton />
 				</div>
 				<div className="hidden lg:flex">
-					<LoginButton />           
+					{tokenFromLocalStorage ? <SignOutButton /> : <LoginButton />}         
 					<RegisterButton />
 				</div>
 			</div>
