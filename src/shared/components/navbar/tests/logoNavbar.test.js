@@ -6,8 +6,8 @@ const { render } = require('@testing-library/react')
 import LogoNavbar from '../logoNavbar'
 // const LogoNavbar = require('../logoNavbar')
 
-test('renders an img tag', () => {
+test('renders an Image tag', () => {
 	const { getByRole } = render(<LogoNavbar />)
-	const imgElement = getByRole('img')
+	const imgElement = getByRole('Image')
 	expect(imgElement).toBeInTheDocument()
 })

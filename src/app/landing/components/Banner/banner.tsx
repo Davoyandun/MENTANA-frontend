@@ -1,5 +1,6 @@
 import React from 'react'
 import ReserveButton from '../../../../shared/components/Buttons/reserveButton'
+import Image from 'next/image'
 
 export default function Banner() {
 	return (
@@ -11,7 +12,7 @@ export default function Banner() {
 						Crecimiento y Bienestar: Psicología Online para Ti
 						</p>
 						<div className="lg:hidden w-[90%] flex h-full items-center self-center">
-							<img className='rounded-xl' src="Images/banner.jpeg" alt="" />
+							<Image className='rounded-xl' src="Images/banner.jpeg" alt="" />
 						</div>
 						<p className="text-slateGray700 w-[95%]  lg:pt-4 text-center lg:text-start">
 						Agenda una cita de forma fácil y segura. Supera las dificultades emocionales y mejora tu calidad de vida con nuestro apoyo profesional a través de sesiones online. Estamos aquí para ayudarte a sentirte mejor.
@@ -22,7 +23,7 @@ export default function Banner() {
 					</div>
 				</div>
 				<div className="hidden lg:flex w-[45%] h-[300px] items-center self-center">
-					<img className='rounded-2xl' src="Images/banner.jpeg" alt="" />
+					<Image className='rounded-2xl' src="Images/banner.jpeg" alt="" />
 				</div>
 			</div>
 		</>
