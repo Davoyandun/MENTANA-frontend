@@ -3,9 +3,10 @@ import React from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '../shared/styles/globals.css'
-import Navbar from '@/shared/components/navbar/navbar'
 import '../config/firebase-config'
 import { AppWrapper } from '@/shared/context'
+import Navbar from '@/shared/components/navbar/navbar'
+import Footer from '@/shared/components/Footer/footer'
 
 
 
@@ -31,6 +32,7 @@ export default function RootLayout({
 				<body className={inter.className}>
 					<Navbar/>
 					{children}
+					<Footer/>
 				</body>
 			
 			</html>

@@ -2,6 +2,8 @@
 import React from 'react'
 import { LandingContent } from './landing/components/LandingContent/LandingContent'
 
+
+
 export default function Home() {
 	return (
 		<>

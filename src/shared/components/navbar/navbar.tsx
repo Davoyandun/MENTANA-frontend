@@ -1,6 +1,5 @@
 'use client'
 
-
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import routes, { Route } from './Routes/routes'
@@ -10,6 +9,7 @@ import RegisterButton from '../Buttons/registerButton'
 import LogoNavbar from './logoNavbar'
 import SignOutButton from '../Buttons/signOutButton'
 import { useAppContext } from '@/shared/context'
+
 
 export default function Navbar() {
 	const {userState} = useAppContext()
@@ -37,7 +37,7 @@ export default function Navbar() {
 		setMenuOpen(false)
 	}, [pathname])
 	
-
+	
 
 
 	return (
@@ -67,7 +67,7 @@ export default function Navbar() {
 					
 				<ul className={`flex flex-col items-center lg:flex lg:flex-row lg:text-center lg:w-3/4 lg:text-xl lg:justify-center gap-4 lg:gap-[75px] space-x-0 lg:space-x-6 text-white mt-4 lg:mt-0 ${menuOpen ? 'flex-grow justify-center gap-6' : 'hidden'}`}>
 					{routes.map((route: Route, index: number) => (
-						<li key={index}  className={`flex lg:w-[${route.width}]`}>
+						<li key={index}  className={`flex ${route.width}`}>
 							<Link href={route.path}>
 								<p className={`hover:font-bold  ${pathname === route.path ? 'font-bold active-link' : ''}`}>
 									{route.name}
