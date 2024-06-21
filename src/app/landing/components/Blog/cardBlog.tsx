@@ -1,6 +1,7 @@
 'use react' 
 
 import BlogButton from '@/shared/components/Buttons/blogButton'
+import Image from 'next/image'
 import React from 'react'
 
 interface CardProps {
@@ -17,7 +18,7 @@ export default function CardBlog({ image, title, description, creationDate, auth
 			<p className="text-chaarcoal300 font-bold w-[90%] lg:w-full mb-3 h-[60px] text-[22px] lg:text-2xl mt-3">{title}</p>
 			<div className='w-full flex justify-center'>
 				{typeof image === 'string' ? (
-					<img className='w-[90%] lg:w-full h-[300px] object-cover' src={image} alt={title} />
+					<Image className='w-[90%] lg:w-full h-[300px] object-cover' height={300} width={300} src={image} alt={title} />
 				) : (
 					image
 				)}

@@ -1,5 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 
+import Image from 'next/image'
+
 interface AboutUsCardProps {
     image: JSX.Element | string; 
     title: string;
@@ -13,7 +15,7 @@ export default function AboutUsCardDesktop({ image, title, description }: AboutU
 			<div className="flex flex-row gap-2">
 				<div>
 					{typeof image === 'string' ? (
-						<img src={image} alt={title} />
+						<Image src={image} alt={title} width={45} height={45}/>
 					) : (
 						image
 					)}

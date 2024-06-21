@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 interface CardProps {
@@ -11,7 +12,7 @@ export default function CardStepToStep({ image, title, description }: CardProps)
 		<div className="flex flex-col items-center text-center lg:items-start lg:text-start lg:w-1/5">
 			<div>
 				{typeof image === 'string' ? (
-					<img src={image} alt={title} />
+					<Image src={image} alt={title} />
 				) : (
 					image
 				)}
