@@ -6,7 +6,7 @@ import StepsForTablet from './stepsForTablet'
 import CalendarIcon from '../../../../../public/Icons/StepToUse/CalendarIcon'
 import FormIcon from '../../../../../public/Icons/StepToUse/formIcon'
 import PaymentIcon from '../../../../../public/Icons/StepToUse/paymentIcon'
-import VideoIcon from './videoIcon'
+import VideoIcon from '../../../../../public/Icons/StepToUse/videoIcon'
 
 export default function StepToUse() {
 	return (

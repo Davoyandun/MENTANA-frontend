@@ -2,10 +2,8 @@
 
 import React from 'react' 
 import AboutUsCardDesktop from './aboutUsCardDesktop'
-import PsychologicalClinic from '../../../../../public/Icons/AboutUs/psychologicalClinicIcon'
 import PsychologicalClinicIcon from '../../../../../public/Icons/AboutUs/psychologicalClinicIcon'
 import NeuropsychologyIcon from '../../../../../public/Icons/AboutUs/neuropsychologyIcon'
-import lenguageIcon from '../../../../../public/Icons/AboutUs/languageIcon'
 import LanguageIcon from '../../../../../public/Icons/AboutUs/languageIcon'
 import EducationalPsychologyIcon from '../../../../../public/Icons/AboutUs/educationalPsychologyIcon'
 
