@@ -12,7 +12,8 @@ export function AppWrapper({children}: {children: React.ReactNode}) {
 		userName: null,
 		email: null,
 		photoUrl: null,
-		token: null
+		token: null,
+		refreshToken: null
 	})
 
 	return <AppContext.Provider value={{userState, setUserState}}> 
