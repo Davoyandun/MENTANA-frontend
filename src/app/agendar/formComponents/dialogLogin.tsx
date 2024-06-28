@@ -20,22 +20,13 @@ export function DialogLogin() {
   const { loginWithGoogleHandler, tokenState } = useLoginButton({redirectTo: "/agendar"});  
   const router = useRouter();
   const [isOpenDialog, setIsOpenDialog] = useState(false);
-  const { toast } = useToast();
-
-
-  
 
   useEffect(() => {
     if (tokenState) {
       setIsOpenDialog(false);
       router.push("/agendar");
-      toast({
-        title: "Inicio de sesión exitoso",
-        description: "Ha iniciado sesión exitosamente.",
-      });
-      
     }
-  }, [tokenState, toast, router]);
+  }, [tokenState, router]);
 
   const handleLogin = () => {
     loginWithGoogleHandler();
