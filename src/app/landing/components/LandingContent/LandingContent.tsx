@@ -8,7 +8,7 @@ import StepToUse from '../StepToUse/stepToUse'
 export function LandingContent() {
 	return (
 		<div className="w-full">
-			<div className="bannerWrapper bg-whiteSmokeBase  flex flex-row pt-20 md:pt-48 mt-4 justify-center">
+			<div className="bannerWrapper bg-whiteSmokeBase  flex flex-row  md:pt-28 mt-4 justify-center">
 				<Banner />
 			</div>
 			<div className="flex flex-col ">

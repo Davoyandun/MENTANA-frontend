@@ -11,6 +11,7 @@ import { TextareaDemo } from "./formComponents/textarea";
 import ButtonPay from "./formComponents/buttonPay";
 import { CheckboxGroupDemo } from "./formComponents/checkBox";
 import ButtonRegisterForm from "./formComponents/buttonRegisterForm";
+import useSession from "@/shared/hooks/useSession";
 
 const formSchema = z.object({
   username: z.string().min(2).max(50),
@@ -18,6 +19,8 @@ const formSchema = z.object({
 });
 
 const AppointmentForm = () => {
+  const { loggedIn } = useSession();
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
