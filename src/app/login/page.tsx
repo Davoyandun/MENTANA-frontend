@@ -43,7 +43,7 @@ export default function Login() {
 
 	return (
 		<div>
-			{!tokenState && <button onClick={loginWithGoogleHandler}>Login with Google</button>}
+			{!tokenState && <button onClick={loginWithGoogleHandler}>Continuar con Google</button>}
 		</div>
 	)
 }
