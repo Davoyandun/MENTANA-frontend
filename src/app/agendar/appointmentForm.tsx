@@ -12,6 +12,7 @@ import ButtonPay from "./formComponents/buttonPay";
 import { CheckboxGroupDemo } from "./formComponents/checkBox";
 import ButtonRegisterForm from "./formComponents/buttonRegisterForm";
 import useSession from "@/shared/hooks/useSession";
+import { DialogLogin } from "./formComponents/dialogLogin";
 
 const formSchema = z.object({
   username: z.string().min(2).max(50),
@@ -68,7 +69,10 @@ const AppointmentForm = () => {
             <p className="text-base md:text-lg text-slateGray700 font-medium italic text-center">
               ¿Aún no tienes cuenta?
             </p>
-            <ButtonRegisterForm />
+            <div className="flex flex-col md:flex-row md:gap-4 justify-center items-center mt-3">
+              <ButtonRegisterForm />
+              <DialogLogin/>
+            </div>
           </div>
         </div>
 

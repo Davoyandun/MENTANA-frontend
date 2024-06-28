@@ -6,8 +6,11 @@ import { auth } from '@/config/firebase-config'
 import { useRouter } from 'next/navigation' 
 import { useAppContext } from '@/shared/context'
 
+type LoginButtonProps = {
+	redirectTo?: string;
+}
 
-export default function Login() {
+export default function useLoginButton({ redirectTo = '/' }: LoginButtonProps) {
 	const router = useRouter()
 	const {userState, setUserState} = useAppContext()
 	const [tokenState, setTokenState] = useState('')
@@ -15,7 +18,7 @@ export default function Login() {
 	useEffect(() => {
 		const tokenInLocalStorage = localStorage.getItem('token')
 		if (tokenInLocalStorage || userState.token) {
-			router.push('/') 
+			router.push(redirectTo) 
 		}
 	}, [tokenState, userState.token])
 
@@ -39,11 +42,12 @@ export default function Login() {
 				console.log('error', error)
 			})
 	}
+
 	
 
-	return (
-		<div>
-			{!tokenState && <button onClick={loginWithGoogleHandler}>Continuar con Google</button>}
-		</div>
-	)
+	return ({
+        tokenState,
+		loginWithGoogleLabel: 'Continuar con Google',
+		loginWithGoogleHandler,
+    })
 }
