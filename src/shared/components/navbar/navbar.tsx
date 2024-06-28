@@ -8,7 +8,6 @@ import LoginButton from '../Buttons/loginButton'
 import RegisterButton from '../Buttons/registerButton'
 import LogoNavbar from './logoNavbar'
 import SignOutButton from '../Buttons/signOutButton'
-import { useAppContext } from '@/shared/context'
 import useSession from '@/shared/hooks/useSession'
 
 
