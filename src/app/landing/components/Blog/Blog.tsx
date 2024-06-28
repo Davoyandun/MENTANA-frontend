@@ -12,30 +12,33 @@ export default function Blog() {
 				<p className="font-bold text-xl text-center mt-6  lg:text-start md:text-3xl md:ml-7 lg:pb-10 text-chaarcoalBase md:mt-5 lg:mt-12 md:self-start">
                     Últimas entradas del Blog
 				</p>
-				<div className='flex flex-col lg:flex-row w-full gap-10 lg:gap-5 justify-center'>
+				<div className='flex flex-col lg:flex-row w-full gap-10 lg:gap-5 justify-center lg:px-10'>
 					<CardBlog 
 						title='Cómo manejar la ansiedad en tiempos de estrés' 
-						image={'/Images/ansiedad.jpeg'} 
+						image_url={'/Images/ansiedad.jpeg'} 
 						description='Descubre estrategias efectivas para lidiar con la ansiedad durante momentos dificiles.' 
 						creationDate={'11/06/24'} 
 						author='Dr. Mentana'
+						id='05e4166c-8a3f-46c0-8e1c-e8cf065681dd'
 					/>
 					<hr className='hidden lg:flex self-center border-[1px] h-[400px] border-whiteSmoke500'/>
 					<CardBlog 
 						title='Cómo manejar la comunicación en pareja' 
-						image={'/Images/comunPareja.jpeg'} 
+						image_url={'/Images/comunPareja.jpeg'} 
 						description='Aprende técnicas para fortalecer la conexión y entendimiento con tu pareja.' 
 						creationDate={'11/06/24'} 
 						author='Dr. Mentana'
+						id='d95b2158-c11c-4f3f-8ca8-eb88626ad10f'
 					/>
 					<hr className='hidden lg:flex self-center border-[1px] h-[400px] border-whiteSmoke500'/>
 
 					<CardBlog 
 						title='Cómo practicar la mindfulness en la vida diaria' 
-						image={'/Images/mindfulness.jpeg'} 
+						image_url={'/Images/mindfulness.jpeg'} 
 						description='Descubre técnicas sencillas para incorporar la atención plena en tu rutina.' 
 						creationDate={'11/06/24'} 
 						author='Dr. Mentana'
+						id='c8963ca3-6e0c-45d4-910a-99d00be4763b'
 					/>
 				</div>
 			</div>
